@@ -12,6 +12,8 @@
 		B208BD321DAAA49E000323FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B208BD301DAAA49E000323FD /* Main.storyboard */; };
 		B208BD341DAAA49E000323FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B208BD331DAAA49E000323FD /* Assets.xcassets */; };
 		B208BD371DAAA49E000323FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B208BD351DAAA49E000323FD /* LaunchScreen.storyboard */; };
+		B208BD3F1DAC1A44000323FD /* avoir l ame chevillee au corps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B208BD3E1DAC1A44000323FD /* avoir l ame chevillee au corps.mp3 */; };
+		B24AC41D1DAEC54E003BCF42 /* res in Resources */ = {isa = PBXBuildFile; fileRef = B24AC41C1DAEC54E003BCF42 /* res */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B208BD331DAAA49E000323FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B208BD361DAAA49E000323FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B208BD381DAAA49E000323FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B208BD3E1DAC1A44000323FD /* avoir l ame chevillee au corps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "avoir l ame chevillee au corps.mp3"; sourceTree = "<group>"; };
+		B24AC41C1DAEC54E003BCF42 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		B208BD2B1DAAA49E000323FD /* prototype_2 */ = {
 			isa = PBXGroup;
 			children = (
+				B24AC41C1DAEC54E003BCF42 /* res */,
+				B208BD3E1DAC1A44000323FD /* avoir l ame chevillee au corps.mp3 */,
 				B208BD2C1DAAA49E000323FD /* AppDelegate.swift */,
 				B208BD2E1DAAA49E000323FD /* ViewController.swift */,
 				B208BD301DAAA49E000323FD /* Main.storyboard */,
@@ -124,6 +130,8 @@
 			files = (
 				B208BD371DAAA49E000323FD /* LaunchScreen.storyboard in Resources */,
 				B208BD341DAAA49E000323FD /* Assets.xcassets in Resources */,
+				B208BD3F1DAC1A44000323FD /* avoir l ame chevillee au corps.mp3 in Resources */,
+				B24AC41D1DAEC54E003BCF42 /* res in Resources */,
 				B208BD321DAAA49E000323FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +296,7 @@
 				B208BD3D1DAAA49E000323FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

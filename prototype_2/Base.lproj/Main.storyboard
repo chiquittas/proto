@@ -1,25 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="prototype_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="top" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="530" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Up2-j1-fUo">
+                                <rect key="frame" x="20" y="30" width="560" height="550"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-q1-o4h">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="476"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="e0Z-3b-bP5" appends="YES" id="ab5-nz-iLe"/>
+                                            <outletCollection property="gestureRecognizers" destination="pcC-Gi-Q8m" appends="YES" id="0xg-9b-KjZ"/>
+                                            <outletCollection property="gestureRecognizers" destination="r76-G8-1om" appends="YES" id="Ynv-CX-vn8"/>
+                                        </connections>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="74" placeholderIntrinsicHeight="74" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRh-eQ-buo">
+                                        <rect key="frame" x="243" y="476" width="74" height="74"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="3DZ-rm-97A"/>
+                                            <constraint firstAttribute="height" constant="74" id="zBc-Nr-FEv"/>
+                                        </constraints>
+                                        <state key="normal" image="Button_grey"/>
+                                        <state key="selected" image="Button_black"/>
+                                        <state key="highlighted" image="Button_black"/>
+                                        <state key="focused" image="Button_black"/>
+                                        <connections>
+                                            <action selector="onSoundButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HT3-cG-kLm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LeG-q1-o4h" firstAttribute="leading" secondItem="Up2-j1-fUo" secondAttribute="leading" id="W2f-j5-ftZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Up2-j1-fUo" secondAttribute="trailing" id="O3b-VK-u4b"/>
+                            <constraint firstItem="Up2-j1-fUo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="U40-Xs-Zpc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Up2-j1-fUo" secondAttribute="bottom" constant="20" id="X0M-qA-wVt"/>
+                            <constraint firstItem="Up2-j1-fUo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sgK-Ul-2KZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="LeG-q1-o4h" id="Nd1-If-Fsc"/>
+                        <outlet property="soundButton" destination="dRh-eQ-buo" id="JxR-dK-Jge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="e0Z-3b-bP5" userLabel="SwipeLeftToRight">
+                    <connections>
+                        <action selector="onSwipeLeftToRight:" destination="BYZ-38-t0r" id="7dN-Vj-MPg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="pcC-Gi-Q8m">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="8xS-1l-ads"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="r76-G8-1om" userLabel="SwipeRightToLeft">
+                    <connections>
+                        <action selector="onSwipeRightToLeft:" destination="BYZ-38-t0r" id="Bzp-eu-bbC"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button_black" width="74" height="74"/>
+        <image name="Button_grey" width="74" height="74"/>
+    </resources>
 </document>
